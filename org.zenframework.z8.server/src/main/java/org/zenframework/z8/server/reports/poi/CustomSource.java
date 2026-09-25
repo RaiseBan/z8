@@ -1,8 +1,5 @@
 package org.zenframework.z8.server.reports.poi;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 import org.zenframework.z8.server.base.form.report.CustomData;
 import org.zenframework.z8.server.runtime.OBJECT;
 import org.zenframework.z8.server.types.primary;
@@ -44,16 +41,6 @@ public class CustomSource extends DataSource {
 	@Override
 	public Object getCurrentValue(String id) {
 		return customData.z8_getValue(new string(id));
-	}
-
-	@Override
-	public Collection<String> getCurrentValueIds() {
-		Collection<String> ids = new ArrayList<String>();
-
-		for (string id : customData.z8_valueIds())
-			ids.add(id.get());
-
-		return ids;
 	}
 
 	@Override
