@@ -9,4 +9,8 @@ public class CustomData extends Object {
 	virtual public int count();
 	virtual public void open();
 	virtual public void close();
+
+	virtual public string[] valueIds();
+	virtual public primary getValue(string id);
+	virtual public void setValue(string id, primary value);
 }
